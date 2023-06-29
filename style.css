@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #aaa;
+}
+
+.banner {
+    position: relative;
+    width: 850px;
+    min-width: 300px;
+    padding: 40px 300px 40px 290px;
+    background: #DFE5EA;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.banner > h2 {
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.banner > p {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* Mail ---------------------------------------------*/
+
+.banner .mail {
+    width: 100%;
+    height: 40px;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: none;
+
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.banner .mail::placeholder {
+    color: #ccc;
+  }
+
+
+/* Checkbox ---------------------------------------------*/
+
+.banner .checkbox {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.banner .checkbox-input {
+    appearance: none;
+    position: absolute;
+}
+
+.banner .checkbox-label {
+    display: block;
+    font-size: 11px;
+    line-height: 15px;
+    padding-left: 30px;
+}
+
+.banner .checkbox-label:before {
+    content: '';
+    width: 17px;
+    height: 17px;
+    border: 1px solid #000;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    cursor: pointer;
+  }
+
+.banner .checkbox-label:after {
+    content: "";
+    width: 5px;
+    height: 11px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(40deg);
+    opacity: 0;
+    pointer-events: none;
+  
+    position: absolute;
+    top: 5px;
+    left: 6px;
+}
+
+.banner .checkbox-input:checked + .checkbox-label:before {
+    background: #000;
+}
+
+.banner .checkbox-input:checked + .checkbox-label:after {
+    opacity: 1;
+}
+
+.banner .checkbox-label > a {
+    color: #000;
+}
+
+.banner .checkbox-label > a:hover {
+    color: #616267;
+}
+
+
+/* Butons ------------------------------------------ */
+
+.banner .btn-yes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #000;
+    border: none;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    cursor: pointer;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+
+    transition: .1s ease-in-out;
+}
+
+.banner .btn-yes:before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: -2px;
+    left: -5px;
+    background-image: url(img/icon_gift.svg);
+}
+
+.banner .btn-yes:hover {
+    background: #616267;
+}
+
+.banner .close-text {
+    font-size: 14px;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.banner .close-text:hover {
+    color: #616267;
+}
+
+.banner .close-icon {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background-image: url(img/icon_close.svg);
+    cursor: pointer;
+    z-index: 100;
+    transition: .2s;
+}
+
+.banner .close-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* Images ------------------------------------------ */
+
+.banner .img-gift {
+    position: absolute;
+    top: -60px;
+    left: -130px;
+    pointer-events: none;
+}
+
+.banner .img-girl {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+
+/* @media ------------------------------------------ */
+
+@media (max-width: 1000px){
+
+    .banner {
+        position: relative;
+        width: 90vw;
+        max-width: 500px;
+        padding: 160px 25px 40px 25px;
+    }
+
+    .banner .close-icon {
+        display: none;
+    }
+
+    .banner > h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .banner .img-gift {
+        width: 200px;
+        top: -65px;
+        left: -15px;
+    }
+    
+    .banner .img-girl {
+        width: 150px;
+        height: auto;
+        bottom: 380px;
+    }
+    
+
+}
